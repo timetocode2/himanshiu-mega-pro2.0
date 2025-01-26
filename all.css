@@ -6,9 +6,23 @@
     user-select: none;
 }
 
+:root {
+    --animated-world: first-anime-in-help 0.3s linear infinite forwards
+}
+
+@keyframes first-anime-in-help {
+    0% {
+        border: blue 4px solid;
+    }
+
+    100% {
+        border: rgb(5, 252, 5) 4px solid;
+    }
+}
+
 html {
     background: linear-gradient(to top, rgb(233, 126, 162), rgb(230, 181, 197));
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 
 }
 
@@ -25,7 +39,9 @@ a:visited {
 
 body {
     width: 100%;
-    overflow-x: hidden;
+    height: 100vh overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+
 }
 
 .header1 {
@@ -85,6 +101,10 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+}
+
+.scale:hover {
+    transform: scale(1.2);
 }
 
 
@@ -165,12 +185,14 @@ here the section is started for sub setting bar */
     z-index: 1000;
 }
 
-.setting-control>span, .apps-control>span {
+.setting-control>span,
+.apps-control>span {
     display: inline-block;
     font-size: 3vh;
     color: white;
     margin: 3vh 0px;
 }
+
 .apps-control {
     border: white solid;
     border-width: 4px 4px 4px 4px;
@@ -200,7 +222,7 @@ here the section is started for sub setting bar */
     z-index: 1000;
 }
 
-.openApp{
+.openApp {
     width: 40vw;
     font-size: 25px;
     height: 50px;
@@ -209,4 +231,68 @@ here the section is started for sub setting bar */
     color: white;
     border: 4px white solid;
     margin: 6vh 0px 6vh 0px;
+
+}
+
+
+
+
+
+#helpcircle {
+    border: 4px white solid;
+    box-shadow: 3px 3px 3px black;
+    background: url(himanshu1.jpg);
+    background-size: contain;
+    width: 69px;
+    height: 69px;
+    border-radius: 100%;
+    position: fixed;
+    right: 1vh;
+    bottom: 3vh;
+    z-index: 100;
+    transition: 0.3s;
+    animation: var(--animated-world);
+}
+
+#helpbox {
+    height: 66vh;
+    width: 78vw;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.helpbox {
+    z-index: 10;
+    transition: 0.1s ease ;
+    box-shadow: inset 5px 5px 7px rgba(255, 62, 158, 0.664);
+
+    border: 5px white solid;
+    border-radius: 10px;
+    color: rgb(250, 18, 87);
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    overflow-y: scroll;
+    background: linear-gradient(to bottom, #c2a3b1dc, #fdb3d8ce);
+    visibility: hidden;
+}
+
+.helpbox>h1 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px rgba(255, 62, 159, 0.8);
+
+}
+
+.help1{
+    margin: 19px 0px;
+    font-size: 19px;
+    line-height: 35px;
+}
+.help2{
+    height: 330vh;
+    width: 70vw;
+background-color: #c20c5e;
+
 }

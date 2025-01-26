@@ -1,3 +1,18 @@
+document.querySelector("main").addEventListener("click", ()=>{
+    apps.classList.remove("sub-nav-show2");
+    apps.classList.add("sub-apps-nav");
+    // calcScrn.style.setProperty("top", "-40px");
+    const close11 = document.querySelectorAll("#themes, #fonts, #fun, #about");
+    setting.classList.remove("sub-nav-show1");
+    setting.classList.add("sub-setting-nav");
+
+    close11.forEach(close1 => {
+        if (close1.style.visibility !== "hidden") {
+            close1.style.setProperty("visibility", "hidden", "important");
+        };
+    });
+
+});
 
 const settingButton = document.querySelector("#setting-button");
 const appsButton = document.querySelector("#apps-button");
@@ -338,3 +353,30 @@ console.log("pubg button js passed");
 
 // for opening sub-nav-bar themes fun calc bali hidden div options from line 66 to 185
 // for opening sub-nav-bar themes fun calc bali hidden div options from line 66 to 185
+
+
+
+
+
+
+
+
+// help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle help circle
+
+const helpcircle = document.getElementById("helpcircle");
+const helpbox = document.getElementById("helpbox");
+let isTranslated = false;
+
+helpcircle.addEventListener("click", () => {
+    const visibility = window.getComputedStyle(helpbox).visibility;
+    if (visibility === "hidden") { helpbox.style.visibility = "visible", document.querySelector("main").style.opacity = 0.1 } else { helpbox.style.visibility = "hidden", document.querySelector("main").style.opacity = 1 };
+
+    if (isTranslated === false) {
+        helpcircle.style.transform = " translateX(-40vw) translateY(-3vh )";
+        isTranslated = true;
+    } else {
+        isTranslated = false;
+        helpcircle.style.transform = "translateX(0) translateY(0)";
+    };
+
+});

@@ -6,73 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="all.css">
-    <style>
-        #tictactoe {
-            width: 100%;
-            height: 98vw;
-            display: flex;
-            background: linear-gradient(to bottom, #b39ce7, #d5dbf7);
-            border: rgb(163, 29, 29) 5px solid;
-            box-sizing: border-box;
-            justify-content: center;
-            box-shadow:inset  9px 0px   4px black;
-            align-content: center;
-        }
-        .tictac{
-            height: 100vh;
-            padding-top: 20vh;
-            width: 100%;
-        }
-
-        .tdclass {
-            width: 100%;
-            height: 33.6%;
-            border: rgb(163, 29, 29) 5px solid;
-            box-sizing: border-box;
-box-shadow: 9px 9px 4px black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-.tdclass1{
-    width: 100%;
-}
-        #main {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-template-rows: auto auto auto;
-            justify-content: center;
-            align-content: center;
-        }
-
-        #circle {
-            width: 23vw;
-            height: 23vw;
-            border: 10px rgb(163, 29, 29) solid;
-            border-radius: 100px;
-            box-shadow:  7px 7px 4px rgba(0, 0, 0, 0.781), inset 7px 7px 4px rgba(0, 0, 0, 0.781);
-
-        }
-
-        #cross {
-            width: 15vw;
-            height: 19vw;
-            font-size: 110px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-color:rgb(36, 13, 168) ;
-text-shadow:7px 7px 4px rgba(0, 0, 0, 0.781) ;
-        }
-    </style>
+    <link rel="stylesheet" href="tictactoe.css">
 </head>
 
-<body id="home-body" class="home-body flexcenter">
+<body id="tictac-body" class="tictac-body flexcenter">
     <div class="head-and-nav">
         <header class="flexcenter header1">❤ Good Games</header>
         <nav class="white-border flexcenter nav1">
             <ul>
-                <li>Home</li>
+                <a href="home.html">
+                    <li>Home</li>
+                </a>
                 <li id="setting-button">Setting</li>
                 <li id="apps-button">Apps</li>
                 <a href="about.html">
@@ -82,7 +26,7 @@ text-shadow:7px 7px 4px rgba(0, 0, 0, 0.781) ;
         </nav>
     </div>
     <!-- main tag starts from here lllllll -->
-    <main class="flexcenter calc-main">
+    <div class="flexcenter calc-main">
 
         <div id="setting" class="hidden sub-setting-nav">
             <ul id="sub-setting-nav-ul" class="sub-setting-nav-ul">
@@ -201,10 +145,15 @@ text-shadow:7px 7px 4px rgba(0, 0, 0, 0.781) ;
         </div>
         <!-- CHAARO YHA BAND HO RHE HAI 
 LINE 44 SE 173 👆👆👆 -->
+    </div>
+    <main class="flexcenter calc-main">
+
         <div class="tictac" id="tictac">
             <div id="tictactoe">
-
-
+                <div class="player player1 flexcenter">Player1</div>
+                <div class="yourmove yourmove1 flexcenter" id="yourmove1">Apni chal chaley</div>
+                <div class="token token-circle flexcenter" id="token-circle">Circle</div>
+                <div class="result result1" id="result1"></div>
                 <div class="tdclass1">
                     <div class="tdclass" id="td1">1</div>
                     <div class="tdclass" id="td2">2</div>
@@ -220,42 +169,52 @@ LINE 44 SE 173 👆👆👆 -->
                     <div class="tdclass" id="td8">8</div>
                     <div class="tdclass" id="td9">9</div>
                 </div>
-            </div>
-        </div>
-    </main>
 
+                <div class="result result2" id="result2"></div>
+                <div class="token token-cross flexcenter" id="token-cross">Cross</div>
+                <div class="yourmove yourmove2 flexcenter" id="yourmove2">Apni chal chaley</div>
+
+                <div class="player player2 flexcenter">Player2</div>
+            </div>
+        </div> <!-- class="tictac"  -->
+        
+    </main>
+    <div class="helpcircle" id="helpcircle"></div>
+    <div id="helpbox" class="helpbox">
+        <h1>Hi buddy</h1>
+        this is not our first time when we are trying to build a website. <br>
+
+        we already have build such type of great projects so many times , now this all just a game of left hand ..
+        Are
+        you even understanding what I am saying <br>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, exercitationem esse dignissimos nesciunt
+        labore
+        nostrum magni suscipit voluptates unde consequuntur beatae ipsa magnam eveniet numquam repellendus a
+        expedita.
+        Ut, mollitia ex culpa, et vero harum earum laborum ipsam debitis, neque voluptatum laboriosam!
+        Reprehenderit,
+        molestiae? Inventore, minima maxime at, magnam aliquam facilis dicta accusantium distinctio architecto
+        expedita
+        repellendus illum ipsa vitae voluptates. Obcaecati ea necessitatibus blanditiis fugit nihil esse autem
+        nobis,
+        ullam assumenda ipsum fugiat vel, sequi iste eum velit labore delectus libero ad. Fuga a, unde eos
+        distinctio
+        aut dolor modi quaerat laudantium officiis pariatur commodi perferendis perspiciatis cum atque iure illum
+        eius
+        voluptatum accusantium ut quasi, error, ducimus animi. Cumque quos eaque at facilis, iste consectetur animi
+        corrupti illo accusantium id facere sunt provident. Fugiat nobis aliquam aspernatur similique veritatis
+        nihil at
+        dolores necessitatibus ratione sit soluta voluptatum nemo fuga libero voluptas rem, laudantium illo cumque
+        magnam modi! In quia fugiat molestias magni sed qui praesentium voluptate exercitationem recusandae impedit.
+        Repudiandae deserunt quod explicabo odit iste culpa eius maxime ducimus vitae sint? Pariatur optio, dolore
+        voluptatem aspernatur cumque cum debitis obcaecati amet neque tenetur sit nobis eveniet ea doloremque totam
+        molestias, omnis sapiente id, nostrum aliquam! Architecto, illo ducimus?
+    </div>
+    
 
 
     <script src="head-and-nav.js"></script>
-<script>
-        const myTd = document.querySelectorAll("#td1, #td2, #td3, #td4, #td5, #td6, #td7, #td8, #td9");
-        let a = "circle";
-
-        myTd.forEach((myt) => {
-            myt.classList.add("tdclass");
-
-
-            myt.addEventListener("click", () => {
-
-                if (a === "circle") {
-                    a = "cross";
-                    let b = document.createElement("div");
-                    b.id = "circle";
-                    myt.innerHTML="";
-                    myt.append(b); console.log("circle");
-                } else {
-                    a = "circle";
-                    
-                    let c = document.createElement("div");
-                    c.id = "cross";
-                    c.innerText = "x";
-                    myt.innerHTML="";
-
-                    myt.append(c);
-                    console.log("cross");
-                };
-            });
-        });
+    <script src="tictactoe.js">
     </script>
 
 </body>
